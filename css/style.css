@@ -1,0 +1,314 @@
+/* ============================================
+   鬼斬 /// Oni-Giri Blade — Brand Stylesheet
+   Ink #1a1612 / Gold #b8965a / Parchment #f5f0e8
+   No rounded corners. Gold border hover.
+   ============================================ */
+
+:root {
+  --ink: #1a1612;
+  --ink-soft: #231f1b;
+  --gold: #b8965a;
+  --gold-dim: rgba(184, 150, 90, 0.35);
+  --gold-faint: rgba(184, 150, 90, 0.2);
+  --parchment: #f5f0e8;
+  --text-body: #c8c3bb;
+  --text-faint: rgba(245, 240, 232, 0.4);
+  --serif: 'Cormorant Garamond', 'Times New Roman', serif;
+  --serif-jp: 'Noto Serif JP', serif;
+  --sans: 'Inter', 'Helvetica Neue', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--ink);
+  color: var(--parchment);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--gold); text-decoration: none; }
+
+img { max-width: 100%; display: block; }
+
+/* ---------- Header ---------- */
+.site-header {
+  border-bottom: 1px solid var(--gold-faint);
+  padding: 20px 24px;
+}
+.site-header__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.site-header__brand {
+  font-family: var(--serif-jp);
+  font-size: 20px;
+  letter-spacing: 0.08em;
+  color: var(--parchment);
+}
+.site-header__brand span { color: var(--gold); }
+.site-nav {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.site-nav a {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-body);
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+.site-nav a:hover, .site-nav a.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* ---------- Notice banner ---------- */
+.notice-bar {
+  background: var(--gold);
+  color: var(--ink);
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+.notice-bar strong { font-weight: 600; }
+
+/* ---------- Layout ---------- */
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.container--wide { max-width: 1080px; }
+
+.section {
+  padding: 64px 0;
+  border-bottom: 1px solid var(--gold-faint);
+}
+.section:last-of-type { border-bottom: none; }
+
+/* ---------- Typography ---------- */
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+h1, .h1 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--parchment);
+}
+h2, .h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--parchment);
+  margin-bottom: 24px;
+}
+h3, .h3 {
+  font-family: var(--serif);
+  font-size: clamp(1.3rem, 2.5vw, 1.85rem);
+  font-weight: 400;
+  color: var(--parchment);
+}
+.jp-sub {
+  font-family: var(--serif-jp);
+  font-size: 12px;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+}
+p { color: var(--text-body); margin-bottom: 16px; }
+p strong { color: var(--parchment); font-weight: 600; }
+
+.pull-quote {
+  border-left: 2px solid var(--gold);
+  padding: 12px 0 12px 24px;
+  margin: 36px 0;
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 2.5vw, 1.55rem);
+  font-style: italic;
+  color: var(--parchment);
+  line-height: 1.55;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 13px 40px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+}
+.btn:hover { background: var(--gold); color: var(--ink); }
+.btn--solid { background: var(--gold); color: var(--ink); }
+.btn--solid:hover { background: transparent; color: var(--gold); }
+
+/* ---------- Cards ---------- */
+.card {
+  border: 1px solid var(--gold-dim);
+  padding: 32px;
+  margin-bottom: 28px;
+}
+.card-badge {
+  display: inline-block;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--gold);
+  padding: 3px 10px;
+  margin-bottom: 16px;
+}
+
+/* ---------- Meta grid ---------- */
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding-top: 20px;
+  border-top: 1px solid var(--gold-faint);
+}
+.meta-label {
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 4px;
+}
+.meta-val { font-size: 13px; color: var(--parchment); line-height: 1.5; }
+
+/* ---------- Product catalog ---------- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+.product-card {
+  border: 1px solid var(--gold-faint);
+  transition: border-color 0.2s;
+}
+.product-card:hover { border-color: var(--gold); }
+.product-card__img {
+  aspect-ratio: 1;
+  background: var(--ink-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.product-card__img img { width: 100%; height: 100%; object-fit: cover; }
+.product-card__body { padding: 18px; }
+.product-card__title {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--parchment);
+  margin-bottom: 4px;
+}
+.product-card__meta { font-size: 11px; color: var(--text-faint); margin-bottom: 10px; }
+.product-card__price { font-size: 14px; color: var(--gold); }
+.product-card__status {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-top: 8px;
+}
+
+/* ---------- Timeline ---------- */
+.timeline {
+  margin: 32px 0;
+  border-left: 1px solid var(--gold-dim);
+  padding-left: 24px;
+}
+.timeline__item { margin-bottom: 20px; position: relative; }
+.timeline__item::before {
+  content: '';
+  position: absolute;
+  left: -28px;
+  top: 6px;
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+}
+.timeline__year {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+.timeline__text { font-size: 14px; color: var(--text-body); line-height: 1.65; margin: 0; }
+
+/* ---------- Note box ---------- */
+.note-box {
+  background: var(--ink-soft);
+  border: 1px solid var(--gold-dim);
+  padding: 20px 24px;
+  font-size: 13px;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--gold-faint);
+  padding: 40px 24px 48px;
+  text-align: center;
+}
+.site-footer__brand {
+  font-family: var(--serif-jp);
+  font-size: 16px;
+  color: var(--parchment);
+  margin-bottom: 8px;
+}
+.site-footer__tagline {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.site-footer__links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.site-footer__links a {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-body);
+}
+.site-footer__links a:hover { color: var(--gold); }
+.site-footer__fine { font-size: 11px; color: var(--text-faint); line-height: 1.8; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  .card { padding: 24px 20px; }
+  .meta-grid { grid-template-columns: 1fr 1fr; }
+  .section { padding: 48px 0; }
+}
