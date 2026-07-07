@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nishida Hamono Kōbō — The Real Wa-Bōchō | 鬼斬 /// Oni-Giri Blade</title>
+  <meta name="description" content="Daisuke Nishida hand-forges wa-bōchō in Kumamoto, Kyushu using hon-warikomi and Shirogami No.1 steel — every step by one smith. Curated by Oni-Giri Blade.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Serif+JP:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+<style>
+.oni-nis__page {
+  background: #1a1612;
+  color: #f5f0e8;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  line-height: 1.75;
+  margin: 0;
+  padding: 0;
+}
+.oni-nis__page *, .oni-nis__page *::before, .oni-nis__page *::after {
+  box-sizing: border-box;
+}
+
+.oni-nis__hero {
+  position: relative;
+  min-height: 88vh;
+  min-height: 88svh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: #1a1612;
+}
+.oni-nis__hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.oni-nis__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(26,22,18,0.97) 0%,
+    rgba(26,22,18,0.55) 50%,
+    rgba(26,22,18,0.15) 100%
+  );
+  z-index: 1;
+}
+.oni-nis__hero-content {
+  position: relative;
+  z-index: 10;
+  padding: 0 5% 8%;
+  max-width: 960px;
+  width: 100%;
+}
+.oni-nis__hero-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #b8965a;
+  margin: 0 0 1.2rem;
+}
+.oni-nis__hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.05;
+  color: #f5f0e8;
+  margin: 0 0 1.5rem;
+}
+.oni-nis__hero-divider {
+  width: 60px;
+  height: 1px;
+  background: #b8965a;
+  margin: 0 0 2rem;
+}
+.oni-nis__hero-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.85rem, 1.8vw, 1.05rem);
+  font-weight: 300;
+  color: rgba(245,240,232,0.8);
+  max-width: 520px;
+  margin: 0;
+  line-height: 1.75;
+}
+
+.oni-nis__section-label {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #b8965a;
+  margin: 0 0 1rem;
+}
+.oni-nis__section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: #f5f0e8;
+  margin: 0 0 2rem;
+}
+.oni-nis__gold-line {
+  width: 50px;
+  height: 1px;
+  background: #b8965a;
+  margin: 0 0 2.5rem;
+}
+.oni-nis__body-text {
+  color: rgba(245,240,232,0.78);
+  line-height: 1.85;
+  font-size: 0.97rem;
+  margin: 0 0 1.2rem;
+}
+.oni-nis__photo-credit {
+  font-size: 0.63rem;
+  letter-spacing: 0.1em;
+  color: rgba(245,240,232,0.3);
+  margin: 0.5rem 0 0;
+  text-align: right;
+}
+.oni-nis__border-frame {
+  position: absolute;
+  inset: -8px;
+  border: 1px solid rgba(184,150,90,0.28);
+  pointer-events: none;
+}
+
+.oni-nis__craftsman {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+  padding: 7rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(184,150,90,0.18);
+}
+.oni-nis__craftsman-img-wrap {
+  position: relative;
+}
+.oni-nis__craftsman-img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  display: block;
+}
+.oni-nis__craftsman-facts {
+  display: grid;
+  gap: 1.2rem;
+  margin: 2rem 0;
+  border-top: 1px solid rgba(184,150,90,0.15);
+  padding-top: 2rem;
+}
+.oni-nis__fact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.oni-nis__fact-label {
+  font-size: 0.63rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #b8965a;
+}
+.oni-nis__fact-value {
+  font-size: 0.95rem;
+  color: #f5f0e8;
+}
+.oni-nis__fact-value a {
+  color: #f5f0e8;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(245,240,232,0.35);
+}
+.oni-nis__social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.oni-nis__social-link {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: #b8965a;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(184,150,90,0.3);
+  padding-bottom: 2px;
+  transition: border-color 0.25s;
+}
+.oni-nis__social-link:hover {
+  border-color: #b8965a;
+}
+
+.oni-nis__sub-divider {
+  width: 30px;
+  height: 1px;
+  background: rgba(184,150,90,0.3);
+  margin: 2.5rem 0;
+}
+.oni-nis__sub-label {
+  font-size: 0.63rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(184,150,90,0.6);
+  margin: 0 0 0.5rem;
+}
+.oni-nis__sub-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: #f5f0e8;
+  margin: 0 0 1rem;
+  line-height: 1.3;
+}
+.oni-nis__step-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.8rem 0 1.4rem;
+  display: grid;
+  gap: 0.45rem;
+}
+.oni-nis__step-list li {
+  font-size: 0.9rem;
+  color: rgba(245,240,232,0.82);
+  padding-left: 1.1rem;
+  position: relative;
+}
+.oni-nis__step-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: #b8965a;
+  font-size: 1.1rem;
+  line-height: 1.15;
+}
+.oni-nis__callout {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #b8965a;
+  margin: 1.2rem 0 0;
+  line-height: 1.5;
+}
+
+.oni-nis__hwk {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+  padding: 7rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(184,150,90,0.18);
+}
+.oni-nis__hwk-img-wrap {
+  position: relative;
+}
+.oni-nis__hwk-img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  display: block;
+}
+
+.oni-nis__vs-box {
+  margin-top: 2.5rem;
+  border: 1px solid rgba(184,150,90,0.22);
+  padding: 1.8rem;
+}
+.oni-nis__vs-header {
+  display: grid;
+  grid-template-columns: 1fr 2rem 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+  text-align: center;
+}
+.oni-nis__vs-col-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #b8965a;
+  line-height: 1.3;
+}
+.oni-nis__vs-col-title.dim {
+  color: rgba(245,240,232,0.35);
+  font-weight: 400;
+}
+.oni-nis__vs-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: rgba(245,240,232,0.25);
+  text-transform: uppercase;
+}
+.oni-nis__vs-row {
+  display: grid;
+  grid-template-columns: 1fr 2rem 1fr;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid rgba(184,150,90,0.1);
+  align-items: center;
+}
+.oni-nis__vs-left {
+  font-size: 0.85rem;
+  color: #f5f0e8;
+  text-align: right;
+}
+.oni-nis__vs-right {
+  font-size: 0.85rem;
+  color: rgba(245,240,232,0.38);
+  text-align: left;
+}
+.oni-nis__vs-mid {
+  border-left: 1px solid rgba(184,150,90,0.18);
+  height: 100%;
+  min-height: 1em;
+}
+
+.oni-nis__youtube {
+  padding: 5rem 5%;
+  max-width: 960px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(184,150,90,0.18);
+}
+.oni-nis__yt-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-top: 2.5rem;
+}
+.oni-nis__yt-wrap iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+
+.oni-nis__custom {
+  padding: 7rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(184,150,90,0.18);
+}
+.oni-nis__knife-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.oni-nis__knife-item {
+  position: relative;
+  overflow: hidden;
+}
+.oni-nis__knife-img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.oni-nis__knife-item:hover .oni-nis__knife-img {
+  transform: scale(1.04);
+}
+.oni-nis__knife-hover-border {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(184,150,90,0);
+  transition: border-color 0.35s;
+  pointer-events: none;
+  z-index: 2;
+}
+.oni-nis__knife-item:hover .oni-nis__knife-hover-border {
+  border-color: rgba(184,150,90,0.55);
+}
+.oni-nis__insta-cta {
+  margin-top: 3rem;
+  text-align: center;
+}
+.oni-nis__insta-cta a {
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #b8965a;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(184,150,90,0.35);
+  padding-bottom: 3px;
+  transition: border-color 0.25s;
+}
+.oni-nis__insta-cta a:hover {
+  border-color: #b8965a;
+}
+
+.oni-nis__footer {
+  border-top: 1px solid rgba(184,150,90,0.18);
+  padding: 4rem 5%;
+  text-align: center;
+}
+.oni-nis__footer-text {
+  font-size: 0.78rem;
+  color: rgba(245,240,232,0.35);
+  line-height: 2.2;
+  margin: 0;
+}
+.oni-nis__footer-text a {
+  color: rgba(245,240,232,0.42);
+  text-decoration: none;
+}
+.oni-nis__footer-text a:hover {
+  color: #b8965a;
+}
+
+@media (max-width: 900px) {
+  .oni-nis__craftsman,
+  .oni-nis__hwk {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .oni-nis__hwk .oni-nis__hwk-img-wrap {
+    order: -1;
+  }
+  .oni-nis__knife-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .oni-nis__craftsman,
+  .oni-nis__hwk,
+  .oni-nis__youtube,
+  .oni-nis__custom {
+    padding: 4rem 5%;
+  }
+  .oni-nis__hero-content {
+    padding: 0 6% 14%;
+  }
+  .oni-nis__knife-grid {
+    grid-template-columns: 1fr;
+  }
+  .oni-nis__vs-box {
+    padding: 1.2rem;
+  }
+  .oni-nis__vs-left,
+  .oni-nis__vs-right {
+    font-size: 0.78rem;
+  }
+}
+</style>
+</head>
+<body>
+
+  <div class="notice-bar">
+    <strong>Online store paused</strong> — find us in person at Illawarra &amp; Wollongong markets.
+  </div>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <div class="site-header__brand">鬼斬 <span>///</span> Oni-Giri Blade</div>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="knives/index.html">Knives</a>
+        <a href="about.html">Our Story</a>
+        <a href="nishida-hamono.html" class="active">The Maker</a>
+        <a href="care.html">Care Guide</a>
+      </nav>
+    </div>
+  </header>
+
+<div class="oni-nis__page">
+<!-- ① HERO -->
+<section class="oni-nis__hero"><img style="object-fit: contain; background: #1a1612;" src="images/nishida/nishida-hero.png" alt="西田刃物工房 custom knife, Kumamoto, Kyushu" class="oni-nis__hero-img" loading="eager">
+<div class="oni-nis__hero-overlay"><br></div>
+<div class="oni-nis__hero-content">
+<p class="oni-nis__hero-eyebrow">西田刃物工房 · Nishida Hamono Kōbō · Kumamoto, Kyushu</p>
+<h1 class="oni-nis__hero-title">The Real<br>Wa-Bōchō.</h1>
+<div class="oni-nis__hero-divider"><br></div>
+<p class="oni-nis__hero-sub">本物の和の包丁<br>Hand-forged in Kumamoto. Every blade made by one smith. No shortcuts.</p>
+</div>
+</section>
+<!-- ② 職人 — THE CRAFTSMAN -->
+<section class="oni-nis__craftsman">
+<div class="oni-nis__craftsman-img-wrap">
+<img loading="lazy" class="oni-nis__craftsman-img" alt="Daisuke Nishida · 西田刃物工房" src="images/nishida/nishida-craftsman.jpg">
+<div class="oni-nis__border-frame"><br></div>
+<p class="oni-nis__photo-credit">Photo: 西田刃物工房 提供</p>
+</div>
+<div>
+<p class="oni-nis__section-label">The Craftsman</p>
+<h2 class="oni-nis__section-title">Daisuke Nishida<br><span style="font-size: 0.52em; font-weight: 400; letter-spacing: 0.06em; color: rgba(245,240,232,0.45);">西田大祐</span>
+</h2>
+<div class="oni-nis__gold-line"><br></div>
+<p class="oni-nis__body-text">Daisuke Nishida began his apprenticeship at a forge at the age of 19. He became independent in 2006 at 28, in Kumamoto, Kyushu. His knives follow hon-warikomi (本割込み), a forging tradition inherited from ancient Japan. This method defines what a true wa-bōchō is.</p>
+<p class="oni-nis__body-text">He holds a firm belief: Japanese blade technology is the finest in the world. Hon-warikomi demands extraordinary time and skill. That belief is reflected in every knife he makes.</p>
+<div class="oni-nis__sub-divider"><br></div>
+<p class="oni-nis__sub-label">Every Step</p>
+<h3 class="oni-nis__sub-heading">One craftsman. Every step.</h3>
+<p class="oni-nis__body-text">Most knives, even premium ones, pass through multiple hands on a production line. Nishida-san does all four himself.</p>
+<ul class="oni-nis__step-list">
+<li>Forging <span style="color: rgba(245,240,232,0.3); font-size: 0.8em;">鍛造</span>
+</li>
+<li>Heat treatment <span style="color: rgba(245,240,232,0.3); font-size: 0.8em;">焼入れ</span>
+</li>
+<li>Grinding <span style="color: rgba(245,240,232,0.3); font-size: 0.8em;">研削</span>
+</li>
+<li>Finishing <span style="color: rgba(245,240,232,0.3); font-size: 0.8em;">仕上げ</span>
+</li>
+</ul>
+<p class="oni-nis__callout">Made by one craftsman.</p>
+<div class="oni-nis__craftsman-facts">
+<div class="oni-nis__fact">
+<span class="oni-nis__fact-label">Experience</span> <span class="oni-nis__fact-value">29+ years (apprenticed at 19, independent since 2006)</span>
+</div>
+<div class="oni-nis__fact">
+<span class="oni-nis__fact-label">Location</span> <span class="oni-nis__fact-value">Kumamoto, Kyushu</span>
+</div>
+<div class="oni-nis__fact">
+<span class="oni-nis__fact-label">Website</span> <span class="oni-nis__fact-value"><a rel="noopener" href="https://dai-knife.com" target="_blank">dai-knife.com</a></span>
+</div>
+</div>
+<div class="oni-nis__social-links">
+<a rel="noopener" class="oni-nis__social-link" href="https://www.instagram.com/daiknives/" target="_blank">Instagram →</a> <a rel="noopener" class="oni-nis__social-link" href="https://www.facebook.com/daisukesaku" target="_blank">Facebook →</a>
+</div>
+</div>
+</section>
+<!-- ③ 本割込み — THE TECHNIQUE -->
+<section class="oni-nis__hwk">
+<div>
+<p class="oni-nis__section-label">The Technique</p>
+<h2 class="oni-nis__section-title">Hon-Warikomi<br><span style="font-size: 0.52em; font-weight: 400; letter-spacing: 0.06em; color: rgba(245,240,232,0.45);">本割込み</span>
+</h2>
+<div class="oni-nis__gold-line"><br></div>
+<p class="oni-nis__body-text">Inherited from ancient Japan, hon-warikomi (本割込み) is a forging tradition passed down through generations of Japanese smiths. The soft iron (地金, jigane) is split with a chisel, the hard steel (鋼, hagane) placed inside, and the two hammer-welded together at precise temperature. Every step is done entirely by hand.</p>
+<p class="oni-nis__body-text">Roughly 100 years ago, machine-laminated blade stock (利器材) was invented and gradually replaced hand-forging across most of the industry. Today it is used in nearly every production knife. Hon-warikomi survives among only a small number of traditional smiths. <strong style="color: #f5f0e8;">Nishida-san is one of them.</strong></p>
+<div class="oni-nis__vs-box">
+<div class="oni-nis__vs-header">
+<div class="oni-nis__vs-col-title">本割込み<br><small style="font-size: 0.8em; font-weight: 300; font-family: 'Inter',sans-serif;">Hon-Warikomi</small>
+</div>
+<div class="oni-nis__vs-label">vs</div>
+<div class="oni-nis__vs-col-title dim">利器材<br><small style="font-size: 0.8em; font-weight: 300; font-family: 'Inter',sans-serif;">Factory Composite</small>
+</div>
+</div>
+<div class="oni-nis__vs-row">
+<div class="oni-nis__vs-left">Hard steel hand-inserted by smith</div>
+<div class="oni-nis__vs-mid"><br></div>
+<div class="oni-nis__vs-right">Steel pressed by machine</div>
+</div>
+<div class="oni-nis__vs-row">
+<div class="oni-nis__vs-left">Forge-welded at precise temperature</div>
+<div class="oni-nis__vs-mid"><br></div>
+<div class="oni-nis__vs-right">Machine-bonded under industrial pressure</div>
+</div>
+<div class="oni-nis__vs-row">
+<div class="oni-nis__vs-left">Superior edge retention</div>
+<div class="oni-nis__vs-mid"><br></div>
+<div class="oni-nis__vs-right">Standard edge performance</div>
+</div>
+<div class="oni-nis__vs-row">
+<div class="oni-nis__vs-left">Each blade shaped by hand</div>
+<div class="oni-nis__vs-mid"><br></div>
+<div class="oni-nis__vs-right">Blanks stamped and press-cut</div>
+</div>
+</div>
+<div class="oni-nis__sub-divider"><br></div>
+<p class="oni-nis__sub-label">Core Steel of Hon-Warikomi</p>
+<h3 class="oni-nis__sub-heading">Shirogami No. 1<br><span style="font-size: 0.72em; font-weight: 300; color: rgba(245,240,232,0.35);">白紙一号鋼</span>
+</h3>
+<p class="oni-nis__body-text">The hagane (芯材) placed at the core of hon-warikomi is Shirogami No. 1 (白紙一号鋼). It is a high-purity carbon steel with very few added alloys. The high carbon content makes it exceptionally hard, capable of taking one of the finest edges among Japanese blade steels.</p>
+<p class="oni-nis__body-text">That hardness also makes it brittle. Without support, the edge chips. Traditional Japanese smiths solved this through hon-warikomi: the hard steel core is wrapped inside soft iron (地金, jigane). The soft iron absorbs shock and prevents chipping. Hard at the cutting edge. Tough through the body.</p>
+<p class="oni-nis__body-text">That hardness comes at a cost beyond chipping. The heat treatment window is narrow. A few degrees too hot or too cold, and the steel is ruined. There is no correction. Smiths who can work with it correctly are extremely rare today.</p>
+</div>
+<div class="oni-nis__hwk-img-wrap">
+<img loading="lazy" class="oni-nis__hwk-img" alt="Hon-warikomi forging process · 西田刃物工房" src="images/nishida/nishida-honwarikomi.png">
+<div class="oni-nis__border-frame"><br></div>
+<p class="oni-nis__photo-credit">Photo: 西田刃物工房 提供</p>
+</div>
+</section>
+<!-- ⑤ YOUTUBE -->
+<section class="oni-nis__youtube">
+<p class="oni-nis__section-label">In the Workshop</p>
+<h2 class="oni-nis__section-title">See the Craft</h2>
+<p class="oni-nis__body-text">In 2020, NHK visited the Nishida Hamono Kōbō workshop. The full broadcast is below.</p>
+<div class="oni-nis__yt-wrap"><iframe title="西田刃物工房 · 鍛造風景 (NHK放送)" src="https://www.youtube.com/embed/jOuo3ghSwIw" loading="lazy" allowfullscreen></iframe></div>
+</section>
+<!-- ⑦ カスタムナイフ — CUSTOM KNIVES -->
+<section class="oni-nis__custom">
+<p class="oni-nis__section-label">The Work</p>
+<h2 class="oni-nis__section-title">Custom Knives<br><span style="font-size: 0.52em; font-weight: 400; letter-spacing: 0.06em; color: rgba(245,240,232,0.45);">カスタムナイフ</span>
+</h2>
+<div class="oni-nis__gold-line"><br></div>
+<p class="oni-nis__body-text">A selection of 西田刃物工房's custom work.</p>
+<div class="oni-nis__knife-grid">
+<div class="oni-nis__knife-item">
+<img loading="lazy" class="oni-nis__knife-img" alt="西田刃物工房 custom knife 01" src="images/nishida/nishida-knife-01.jpg">
+<div class="oni-nis__knife-hover-border"><br></div>
+<p class="oni-nis__photo-credit">Photo: 西田刃物工房 提供</p>
+</div>
+<div class="oni-nis__knife-item">
+<img loading="lazy" class="oni-nis__knife-img" alt="西田刃物工房 custom knife 02" src="images/nishida/nishida-knife-02.jpg">
+<div class="oni-nis__knife-hover-border"><br></div>
+<p class="oni-nis__photo-credit">Photo: 西田刃物工房 提供</p>
+</div>
+<div class="oni-nis__knife-item">
+<img loading="lazy" class="oni-nis__knife-img" alt="西田刃物工房 custom knife 03" src="images/nishida/nishida-knife-03.jpg">
+<div class="oni-nis__knife-hover-border"><br></div>
+<p class="oni-nis__photo-credit">Photo: 西田刃物工房 提供</p>
+</div>
+</div>
+<div class="oni-nis__insta-cta"><a rel="noopener" href="https://www.instagram.com/daiknives/" target="_blank">View full collection on Instagram →</a></div>
+</section>
+<!-- ⑧ FOOTER --><footer class="oni-nis__footer">
+<p class="oni-nis__footer-text">All content and images courtesy of 西田大祐 / 西田刃物工房.<br><a rel="noopener" href="https://dai-knife.com" target="_blank">dai-knife.com</a>  ·  <a rel="noopener" href="https://dai-knife.com/lineup" target="_blank">Full Lineup</a>  ·  <a rel="noopener" href="https://www.instagram.com/daiknives/" target="_blank">Instagram</a>  ·  <a rel="noopener" href="https://www.facebook.com/daisukesaku" target="_blank">Facebook</a><br>Curated by 鬼斬 /// Oni-Giri Blade  ·  <a href="index.html">oniblade.com.au</a></p>
+</footer>
+</div>
+
+</body>
+</html>
